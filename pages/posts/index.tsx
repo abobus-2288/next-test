@@ -35,7 +35,7 @@ const Posts = ({posts}: PostsProps) => {
             <Heading text="Posts list:"/>
             <ul>
                 {posts && posts.map(({id, title}: Post) => (
-                    <li>
+                    <li key={id}>
                         <Link href={`/posts/${id}`}>
                             <strong>{title}</strong>
                         </Link>
